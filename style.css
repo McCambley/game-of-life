@@ -1,0 +1,22 @@
+body {
+  background-color: oklch(80.17% 0.091 258.88);
+  font-family: "monospace";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-spacing: 1px;
+}
+
+td {
+  padding: 0rem;
+  height: 8px;
+  width: 8px;
+  text-align: center;
+  border-radius: 1px;
+}
