@@ -1,5 +1,7 @@
 body {
+  background-color: oklch(70.94% 0.136 258.06);
   background-color: oklch(80.17% 0.091 258.88);
+  background-color: oklch(39.53% 0.15 259.87);
   font-family: "monospace";
   display: flex;
   justify-content: center;
@@ -10,13 +12,15 @@ body {
 }
 
 table {
-  border-spacing: 1px;
+  border-spacing: 0px;
 }
 
 td {
   padding: 0rem;
-  height: 8px;
-  width: 8px;
+  height: 4px;
+  width: 4px;
+  min-height: 4px;
+  min-width: 4px;
   text-align: center;
-  border-radius: 1px;
+  border-radius: 50px;
 }

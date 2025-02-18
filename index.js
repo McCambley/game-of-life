@@ -43,7 +43,7 @@ var gameOfLife = function (board) {
   });
 };
 
-const n = 3;
+const n = 20;
 const newBoard = Array.from({ length: n * 16 }, () => Array(n * 9).fill(0));
 newBoard.forEach((row, rowIndex) => {
   row.forEach((column, columnIndex) => {
@@ -60,12 +60,10 @@ function createTable(data) {
     const tr = document.createElement("tr");
     row.forEach((num) => {
       const td = document.createElement("td");
-      td.style.color = num
-        ? "oklch(39.53% 0.15 259.87)"
-        : "oklch(95.57% 0.003 286.35)";
+
       td.style.backgroundColor = num
-        ? "oklch(70.94% 0.136 258.06)"
-        : "oklch(62.39% 0.181 258.33)";
+        ? "oklch(80.17% 0.091 258.88)"
+        : "oklch(39.53% 0.15 259.87)";
 
       td.textContent = "";
       tr.appendChild(td);
