@@ -44,10 +44,16 @@ var gameOfLife = function (board) {
 };
 
 const n = 20;
-const newBoard = Array.from({ length: n * 16 }, () => Array(n * 9).fill(0));
+const rowAmount = 16;
+const columnAmount = 9;
+const newBoard = Array.from({ length: n * rowAmount }, () =>
+  Array(n * columnAmount).fill(0)
+);
+const interval = Math.round(Math.random() * 50) + 3;
 newBoard.forEach((row, rowIndex) => {
   row.forEach((column, columnIndex) => {
-    const value = Math.round(Math.random());
+    const start = rowIndex * columnAmount + columnIndex;
+    const value = start & interval ? 0 : 1;
     newBoard[rowIndex][columnIndex] = value;
   });
 });
@@ -82,4 +88,4 @@ function updateBoardDisplay() {
 setInterval(() => {
   gameOfLife(newBoard);
   updateBoardDisplay();
-}, (60 / 40) * 1000);
+}, 1000 / 2);
